@@ -7,6 +7,14 @@ def dice_roll(size=6):
     else:
         return f"{size}-sided dice doesn't exist."
 
+def multiple_dices(number):
+  return [dice_roll() for i in range(number)]
 
-for i in range(0, 10):
-    print(dice_roll(6))
+
+# test
+# for i in range(0,10):
+#   print(dice_roll(6))
+
+
+for i in range(0,10):
+  print(multiple_dices(4))
