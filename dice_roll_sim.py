@@ -4,7 +4,7 @@ import random
 def get_player_input():
     print("Enter a dice you'd like to roll: ")
     input_str = input()
-
+    number = 1
     if 'd' in input_str:
         number = int(input_str.split('d')[0])
     elif 'D' in input_str:
@@ -17,7 +17,7 @@ def get_player_input():
     else:
         modifier = 0
 
-    dice_size = int(input_str.replace("d", " ").replace("+", " ").replace("-", " ").split(' ')[1])
+    dice_size = int(input_str.replace("d", " ").replace("D", " ").replace("+", " ").replace("-", " ").split(' ')[1])
 
     return number, dice_size, modifier
 
@@ -29,11 +29,8 @@ def dice_roll(size=6):
         return f"{size}-sided dice doesn't exist."
 
 
-def multiple_dices(number):
-    return [dice_roll() for i in range(number)]
-
-
 def roll():  # work in progress
+
     number, dice_size, modifier = get_player_input()
 
     rolls = [dice_roll(dice_size) for i in range(number)]
