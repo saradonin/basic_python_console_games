@@ -5,7 +5,10 @@ def get_player_input():
     print("Enter a dice you'd like to roll: ")
     input_str = input()
 
-    number = int(input_str.split('d')[0])
+    if 'd' in input_str:
+        number = int(input_str.split('d')[0])
+    elif 'D' in input_str:
+        number = int(input_str.split('D')[0])
 
     if "+" in input_str:
         modifier = int(input_str.split('+')[-1])
@@ -33,9 +36,10 @@ def multiple_dices(number):
 def roll():  # work in progress
     number, dice_size, modifier = get_player_input()
 
-    rolls = [dice_roll(dice_size) for i in range(number+1)]
+    rolls = [dice_roll(dice_size) for i in range(number)]
+    result = sum(rolls) + modifier
 
-    return number, dice_size, modifier, rolls
+    return number, dice_size, modifier, rolls, result
 
 
 # test
