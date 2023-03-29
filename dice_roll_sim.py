@@ -47,7 +47,7 @@ def dice_roll(dice_size=6):
     return random.randint(1, dice_size)
 
 
-def roll():  # work in progress
+def roll():
     number, dice_size, modifier = get_player_input()
 
     rolls = [dice_roll(dice_size) for i in range(number)]
@@ -61,12 +61,5 @@ Rolls: {rolls}
 Result: {result}
 """
 
-
-# test
-
-# for i in range(0,10):
-#   print(dice_roll(6))
-
-# print(get_player_input())
 
 print(roll())
