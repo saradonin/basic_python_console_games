@@ -6,7 +6,7 @@ def get_player_input():
     Prompts used to input string data defining parameters of dice rolls.
     Takes string in format: xDy+z
     where:
-    x - number of dices (optional, default = 1)
+    x - number of dice (optional, default = 1)
     y - size of the single dice from set [3, 4, 6, 8, 10, 12, 20, 100]
     z - modifier (optional, default = 0)
     :return: tuple of int values (number, dice_size, modifier)
@@ -63,7 +63,7 @@ def dice_roll(dice_size=6):
 
 def roll():
     """
-    Calls external function get_player_input to generate input data: number (int) - number of dices, dice_size (int) - size of the dice, modifier (int) - result modifier.
+    Calls external function get_player_input to generate input data: number (int) - number of dice, dice_size (int) - size of the dice, modifier (int) - result modifier.
     Returns the sum of all dice rolls modified by modifier value.
     :return: int - sum of all rolls modified by modifier value
     """
