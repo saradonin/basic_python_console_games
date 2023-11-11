@@ -1,3 +1,5 @@
+*The repository contains several simple text-based games designed as practise of Python fundamentals.*
+
 
 ## RPG dice roll simulator
 Dice roll simulator 
@@ -25,9 +27,7 @@ Reverse number guessing game is a simple console game in which player must think
 Player provides feedback to whether the guess was a hit or number was either too big or to small.
 
 
-## Dice Game 2001 #
-
-#### Rules: 
+## Dice Game 2001 
 Each player starts with a score of 0.
 On his turn, a player rolls 2 dices from a set: D3, D4, D6, D8, D10, D12, D20, D100.
 Computer rolls 2 random dices form the same set.
